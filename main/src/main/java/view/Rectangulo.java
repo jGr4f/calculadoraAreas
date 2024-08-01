@@ -37,7 +37,7 @@ public class Rectangulo extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         labelResultado = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        inputRadio1 = new javax.swing.JTextField();
+        inputLado = new javax.swing.JTextField();
 
         jLabel2.setText("jLabel2");
 
@@ -94,9 +94,9 @@ public class Rectangulo extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Digite la longitud del lado b:  ");
 
-        inputRadio1.addActionListener(new java.awt.event.ActionListener() {
+        inputLado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputRadio1ActionPerformed(evt);
+                inputLadoActionPerformed(evt);
             }
         });
 
@@ -119,7 +119,7 @@ public class Rectangulo extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inputRadio1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputLado, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(inputRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(61, 61, 61)
@@ -136,7 +136,7 @@ public class Rectangulo extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(inputRadio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inputLado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -177,8 +177,15 @@ public class Rectangulo extends javax.swing.JFrame {
     private void botonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularActionPerformed
         if (!"".equals(inputRadio.getText()) ){
             String r = inputRadio.getText();
+            if (!"".equals(inputLado.getText()) ){
+                String l = inputLado.getText();
+             //  labelResultado.setText(LRectangulo.convertir(LRectangulo.calcular(r, l))); 
+            }
+            else{
+                jLabel1.setText("No hay un lado dado. ");
+            }
             
-            //labelResultado.setText(LCirculo.convertir());
+            
             
             
             
@@ -186,13 +193,13 @@ public class Rectangulo extends javax.swing.JFrame {
             
         }
         else{
-            jLabel1.setText("No hay un radio dado. ");
+            jLabel1.setText("No hay un lado dado. ");
         }
     }//GEN-LAST:event_botonCalcularActionPerformed
 
-    private void inputRadio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputRadio1ActionPerformed
+    private void inputLadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputLadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputRadio1ActionPerformed
+    }//GEN-LAST:event_inputLadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,8 +239,8 @@ public class Rectangulo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton botonCalcular;
+    private javax.swing.JTextField inputLado;
     private javax.swing.JTextField inputRadio;
-    private javax.swing.JTextField inputRadio1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

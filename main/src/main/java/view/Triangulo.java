@@ -37,7 +37,7 @@ public class Triangulo extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         labelResultado = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        inputRadio1 = new javax.swing.JTextField();
+        inputAltura = new javax.swing.JTextField();
 
         jLabel2.setText("jLabel2");
 
@@ -94,9 +94,9 @@ public class Triangulo extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Digite la altura del triangulo: ");
 
-        inputRadio1.addActionListener(new java.awt.event.ActionListener() {
+        inputAltura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputRadio1ActionPerformed(evt);
+                inputAlturaActionPerformed(evt);
             }
         });
 
@@ -117,7 +117,7 @@ public class Triangulo extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(inputRadio1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
                         .addComponent(botonCalcular)))
                 .addGap(72, 72, 72))
@@ -139,7 +139,7 @@ public class Triangulo extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(inputRadio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonCalcular))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -171,8 +171,11 @@ public class Triangulo extends javax.swing.JFrame {
     private void botonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularActionPerformed
         if (!"".equals(inputRadio.getText()) ){
             String r = inputRadio.getText();
-            
-           // labelResultado.setText(LTriangulo.convertir());
+            if (!"".equals(inputAltura.getText()) ){
+                String h = inputAltura.getText();
+                // labelResultado.setText(LTriangulo.convertir(LTriangulo.calcular(r, h)));
+            }
+           
             
             
             
@@ -184,9 +187,9 @@ public class Triangulo extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_botonCalcularActionPerformed
 
-    private void inputRadio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputRadio1ActionPerformed
+    private void inputAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputAlturaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputRadio1ActionPerformed
+    }//GEN-LAST:event_inputAlturaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,8 +229,8 @@ public class Triangulo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton botonCalcular;
+    private javax.swing.JTextField inputAltura;
     private javax.swing.JTextField inputRadio;
-    private javax.swing.JTextField inputRadio1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
