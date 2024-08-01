@@ -138,15 +138,25 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTrianguloActionPerformed
-        // TODO add your handling code here:
+        Triangulo formCirculo = new Triangulo();
+        formCirculo.setVisible(true);
+        formCirculo.setResizable(false);
+        formCirculo.setLocationRelativeTo(null);
     }//GEN-LAST:event_botonTrianguloActionPerformed
 
     private void botonRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRectanguloActionPerformed
-        // TODO add your handling code here:
+        Rectangulo formCirculo = new Rectangulo();
+        formCirculo.setVisible(true);
+        formCirculo.setResizable(false);
+        formCirculo.setLocationRelativeTo(null);
     }//GEN-LAST:event_botonRectanguloActionPerformed
 
     private void botonCirculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCirculoActionPerformed
-        // TODO add your handling code here:
+        Circulo formCirculo = new Circulo();
+        formCirculo.setVisible(true);
+        formCirculo.setResizable(false);
+        formCirculo.setLocationRelativeTo(null);
+   
     }//GEN-LAST:event_botonCirculoActionPerformed
 
     /**

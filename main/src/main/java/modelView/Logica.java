@@ -9,10 +9,17 @@ package modelView;
  * @author juanr
  */
 public abstract class Logica {
-    protected double x;
-    protected  double y;
+    public double x;
+    public  double y;
     
-    public abstract double calcular();
+    public abstract double calcular(String x,String y);{
+    
+    }
+    
+    
+        
+        
+    
     
     
 }
